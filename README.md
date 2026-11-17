@@ -7,7 +7,7 @@
 <p align="center">
   <b>无需账号的 macOS Chromium 桌面浏览器</b><br>
   本地优先 · 默认拦截广告 · 独立真实 Tor 窗口 · Chrome 风格界面<br>
-  当前版本 <b>1.3.1</b> · Apple Silicon (arm64) · Electron 45.3.2 / Chromium 156
+  当前版本 <b>1.3.1</b> · macOS (Apple Silicon) + Linux (x86_64) · Electron 45.3.2 / Chromium 156
 </p>
 
 ## 界面预览
@@ -40,6 +40,8 @@
 - **Tom-chrome-1.3.1-arm64.zip**：解压后把 **Tom chrome.app** 放到任意位置双击运行。
 
 系统要求：Apple Silicon Mac（M 系列芯片）。运行成品不需要 Node.js、npm 或源码。
+
+**Linux 版（x86_64）**：同一 Release 里还有 AppImage（`chmod +x` 后直接运行，免安装）、deb（Debian / Ubuntu 系）和 tar.gz 三种包。注意：随包 Tor 组件是 macOS 二进制，未打进 Linux 包，所以 Linux 版的 Tor 窗口不可用（会按设计失败关闭，不回退普通网络），其余功能与 macOS 版相同。
 
 > 应用未做付费 Apple 开发者签名 / 公证，第一次打开如果被系统拦截，请右键点应用选“打开”确认一次即可，不要全局关闭 Gatekeeper。
 
