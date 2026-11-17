@@ -1,0 +1,10 @@
+node_modules/
+dist/
+evidence/
+vendor/tor/tor
+vendor/tor/geoip
+vendor/tor/geoip6
+vendor/tor/lib/
+.DS_Store
+*.log
+__pycache__/

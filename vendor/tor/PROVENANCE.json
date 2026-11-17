@@ -1,0 +1,34 @@
+[
+  {
+    "package": "tor",
+    "version": "0.4.9.17",
+    "source": "https://ghcr.io/v2/homebrew/core/tor/blobs/sha256:9364972fd66247bde591aa1d3207d07091d484a0aa30c9e887cbe074f18c783e",
+    "sha256": "9364972fd66247bde591aa1d3207d07091d484a0aa30c9e887cbe074f18c783e",
+    "upstream": "https://formulae.brew.sh/formula/tor",
+    "bottle": "arm64_sequoia"
+  },
+  {
+    "package": "libevent",
+    "version": "2.1.13",
+    "source": "https://ghcr.io/v2/homebrew/core/libevent/blobs/sha256:55344e687f9be992ae9dca23aad5bf6f3bbaa9e63031915cd2738da11787500b",
+    "sha256": "55344e687f9be992ae9dca23aad5bf6f3bbaa9e63031915cd2738da11787500b",
+    "upstream": "https://formulae.brew.sh/formula/libevent",
+    "bottle": "arm64_sequoia"
+  },
+  {
+    "package": "libscrypt",
+    "version": "1.22",
+    "source": "https://ghcr.io/v2/homebrew/core/libscrypt/blobs/sha256:7a251107f146f88d993fa4fe542c8fbd92d9123904359f91ac5f44aedbb90344",
+    "sha256": "7a251107f146f88d993fa4fe542c8fbd92d9123904359f91ac5f44aedbb90344",
+    "upstream": "https://formulae.brew.sh/formula/libscrypt",
+    "bottle": "arm64_sequoia"
+  },
+  {
+    "package": "openssl/4",
+    "version": "4.1.0",
+    "source": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978",
+    "sha256": "6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978",
+    "upstream": "https://formulae.brew.sh/formula/openssl@4",
+    "bottle": "arm64_sequoia"
+  }
+]

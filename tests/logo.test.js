@@ -1,0 +1,2 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
+test('product logo preserves official reference byte-for-byte except four fill colors',()=>{let source=fs.readFileSync('assets/branding/chromium-product-logo.svg','utf8');for(const [a,b]of Object.entries({'#669DF6':'#22b7a5','#AECBFA':'#3998ed','#1A73E8':'#2467bc','#1967D2':'#7165dc'}))source=source.replaceAll(`fill="${a}"`,`fill="${b}"`);assert.equal(fs.readFileSync('assets/logo.svg','utf8'),source);assert.ok(fs.statSync('assets/icon.icns').size>10000)});

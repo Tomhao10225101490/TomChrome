@@ -1,0 +1,93 @@
+{
+  "name": "tom-chrome",
+  "version": "1.3.1",
+  "description": "Tom chrome — a private, local-first Chromium browser",
+  "main": "src/main.js",
+  "author": "Tom",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "node tests/e2e.js",
+    "test:privacy": "node tests/privacy-e2e.js",
+    "test:refinements": "node tests/refinements-e2e.js",
+    "test:performance": "node tests/performance-e2e.js",
+    "filters:build": "node scripts/compile-filters.js",
+    "prebuild": "npm run filters:build",
+    "predist": "npm run filters:build",
+    "test:bilibili": "node tests/bilibili-check.js",
+    "test:tor": "node tests/tor-e2e.js",
+    "test:tor-lifecycle": "node tests/tor-lifecycle-e2e.js",
+    "build": "electron-builder --mac dir",
+    "dist": "electron-builder --mac dmg zip",
+    "test:comprehensive": "node tests/comprehensive-e2e.js",
+    "test:permissions": "node tests/permissions-e2e.js"
+  },
+  "devDependencies": {
+    "electron": "45.3.2",
+    "electron-builder": "^26.0.12",
+    "playwright": "^1.58.0"
+  },
+  "build": {
+    "appId": "com.tom.chrome",
+    "productName": "Tom chrome",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/logo.svg",
+      "assets/branding/**/*",
+      "assets/icon.icns",
+      "assets/adblock/**/*",
+      "THIRD_PARTY_NOTICES.md",
+      "package.json"
+    ],
+    "asar": true,
+    "extraResources": [
+      {
+        "from": "vendor/tor",
+        "to": "tor",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "electronDist": "node_modules/electron/dist",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns",
+      "identity": null,
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "extendInfo": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLName": "Web URLs",
+            "CFBundleURLSchemes": [
+              "http",
+              "https"
+            ],
+            "CFBundleTypeRole": "Viewer"
+          }
+        ],
+        "NSCameraUsageDescription": "网站请求使用摄像头时，经你同意后允许访问。",
+        "NSMicrophoneUsageDescription": "网站请求使用麦克风时，经你同意后允许访问。"
+      }
+    },
+    "dmg": {
+      "title": "Tom chrome",
+      "window": {
+        "width": 600,
+        "height": 400
+      }
+    },
+    "artifactName": "Tom-chrome-${version}-${arch}.${ext}"
+  },
+  "dependencies": {
+    "@ghostery/adblocker": "2.20.3",
+    "tldts": "7.5.4"
+  }
+}

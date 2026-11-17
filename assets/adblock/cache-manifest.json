@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "engine": "2.20.3",
+  "ads": {
+    "rules": [
+      {
+        "file": "easylist.txt",
+        "sha256": "27340fc2d7c5e135480fd20cf5bf35641c8224b355b95f9f6fff4f88dec56f85"
+      },
+      {
+        "file": "easylistchina.txt",
+        "sha256": "e047687ac1b09a26709660023bb065c65d70f8f10934e9b480fc6be720d47e40"
+      }
+    ],
+    "sha256": "8ba61357111b23812e7aa831541af325a43fd7e3e5e301cf9abe04ee9731d2ee"
+  },
+  "tracking": {
+    "rules": [
+      {
+        "file": "easyprivacy.txt",
+        "sha256": "2dab305cd4bfa06a27b8f5633e75625815b99822e58375f58012e7978adf16a3"
+      }
+    ],
+    "sha256": "086de4b14d140f9ed6c344521481670cdd642b701429285e90c536403baee9af"
+  }
+}
